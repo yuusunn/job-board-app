@@ -61,18 +61,18 @@ const JobBoard: React.FC = () => {
         <section className="bg-white shadow-md rounded p-4 mb-8 flex flex-wrap items-center justify-between">
           <div className="flex flex-wrap gap-3">
             {tagFilters.map(tag => (
-              <span key={tag} className="flex items-center bg-desaturated-dark-cyan text-white px-3 py-1 rounded">
+              <span key={tag} className="flex space-between bg-desaturated-dark-cyan text-white px-3 rounded">
                 {tag}
                 <button
                   onClick={() => removeFilter(tag)}
-                  className="ml-2 bg-dark-cyan text-white rounded-full w-5 h-5 text-xs"
+                  className="flex space-between bg-dark-cyan text-white rounded w-5 h-5"
                 >
                   ×
                 </button>
               </span>
             ))}
           </div>
-          <button onClick={clearFilters} className="text-sm text-dark-cyan underline mt-2 md:mt-0">
+          <button onClick={clearFilters} className="text-sm text-desaturated-dark-cyan underline mt-2 md:mt-0">
             Clear
           </button>
         </section>
